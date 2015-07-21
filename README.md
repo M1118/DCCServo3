@@ -84,6 +84,7 @@ so a 10% speed setting means 10% of travel from lower limit to upper
 limit.
 
 Initial position bits control the movement of the servo at startup. 
+
 | Value | Description |
 | :---: | --- |
 | 0 | No movement of the servo at startup |
