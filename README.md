@@ -76,9 +76,9 @@ The servo configuration values (CV33, CV38 and CV 40) are defined as follows
 
 Absolute mode controls the effect the speed knob has on the servo
 position. A value of 0 in this bit field results in the speed setting
-controllign the speed of the servo movement, relative the minimum
+controlling the speed of the servo movement, relative the minimum
 travel time set in the relavant CV for the servo. A value of 1 means
-the speed knob poisition sets the absolute position of the servo.
+the speed knob position sets the absolute position of the servo.
 In absolute mode the end positions are still taken into account,
 so a 10% speed setting means 10% of travel from lower limit to upper
 limit.
@@ -94,3 +94,5 @@ Initial position bits control the movement of the servo at startup.
 
 Changes to the servo mode will only take effect after the decoder
 has been power cycled.
+
+This project is based on my DCCServo library and the NMRA DCC library.
