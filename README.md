@@ -57,15 +57,15 @@ The decoder supports the following CV values:
 | 29 | Configuration options | 0 |
 | 30 | First servo lower limit angle (degrees) | 0 |
 | 31 | First servo upper limit angle (degrees) | 180 |
-| 32 | First servo travel time (seconds) | 5 |
+| 32 | First servo travel time (seconds). The time to move better lower and upper limit at 100% throttle. Ignored in absolute mode | 5 |
 | 33 | First servo configuration flags (see below) | 3 |
 | 35 | First servo lower limit angle (degrees) | 0 |
 | 36 | First servo upper limit angle (degrees) | 180 |
-| 37 | First servo travel time (seconds) | 5 |
+| 37 | First servo travel time (seconds). The time to move better lower and upper limit at 100% throttle. Ignored in absolute mode | 5 |
 | 38 | First servo configuration flags (see below) | 3 |
 | 40 | First servo lower limit angle (degrees) | 0 |
 | 41 | First servo upper limit angle (degrees) | 180 |
-| 42 | First servo travel time (seconds) | 5 |
+| 42 | First servo travel time (seconds). The time to move better lower and upper limit at 100% throttle. Ignored in absolute mode | 5 |
 | 43 | First servo configuration flags (see below) | 3 |
 
 The servo configuration values (CV33, CV38 and CV 40) are defined as follows
@@ -77,9 +77,9 @@ The servo configuration values (CV33, CV38 and CV 40) are defined as follows
 Absolute mode controls the effect the speed knob has on the servo
 position. A value of 0 in this bit field results in the speed setting
 controllign the speed of the servo movement, relative the minimum
-travel time set in the relavant CV fo rthe servo. A value of 1 means
+travel time set in the relavant CV for the servo. A value of 1 means
 the speed knob poisition sets the absolute position of the servo.
-In absolute mode the end positions are still taken itno account,
+In absolute mode the end positions are still taken into account,
 so a 10% speed setting means 10% of travel from lower limit to upper
 limit.
 
@@ -91,3 +91,6 @@ Initial position bits control the movement of the servo at startup.
 | 1 | The servo moves to the lower limit position at startup |
 | 2 | The servo moves to the upper limit position at startup |
 | 3 | The servo moves to the mid point between the lower and upper limit position at startup |
+
+Changes to the servo mode will only take effect after the decoder
+has been power cycled.
